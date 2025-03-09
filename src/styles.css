@@ -79,7 +79,7 @@ body {
     width: 100%;
     margin: 0 auto;
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: opacity 1.5s ease;
 }
 
 .info.show {
@@ -134,7 +134,7 @@ h1, .info h1, .info h2 {
 .info ul li a {
     color: #76CCE0;
     text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;  /* Ajouter une transition pour la mise à l'échelle */
+    transition: color 0.3s ease, transform 0.3s ease, font-size 0.3s;  /* Ajouter une transition pour la mise à l'échelle */
     width: 10%;
 }
 .info ul li a:hover {
