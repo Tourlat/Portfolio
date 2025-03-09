@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         isTyping = false;
         typingEffect.textContent = "Foucault Félix";
         typingEffect.classList.add('remove-cursor');
+        document.getElementById('enter-command').style.display = 'none';
         document.querySelector('.info').classList.add('show');
     }
     
