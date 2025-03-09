@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const typingEffect = document.getElementById('typing-effect');
     const enterCommand = document.getElementById('enter-command');
-    const text = typingEffect ? typingEffect.textContent : '';
-    if (typingEffect) typingEffect.textContent = '';
+    const text = "Foucault Félix";
 
     let isTyping = true;
     let i = 0;
