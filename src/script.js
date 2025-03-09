@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const typingEffect = document.getElementById('typing-effect');
     const enterCommand = document.getElementById('enter-command');
     const text = "Foucault Félix";
-
+    typingEffect.textContent = '';
     let isTyping = true;
     let i = 0;
 
