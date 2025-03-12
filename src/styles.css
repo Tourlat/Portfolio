@@ -117,7 +117,7 @@ h1, .info h1, .info h2 {
     line-height: 1.5;
 }
 
-.info ul {
+ ul {
     list-style: none;
     
     flex-wrap: wrap;
@@ -126,22 +126,23 @@ h1, .info h1, .info h2 {
     margin: 0;
 }
 
-.info ul li {
+ ul li {
    
     margin: 5px 10px;
 }
 
-.info ul li a {
+ ul li a {
     color: #76CCE0;
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease, font-size 0.3s;  /* Ajouter une transition pour la mise à l'échelle */
     width: 10%;
+    line-height: 26px;
 }
-.info ul li a:hover {
+
+ ul li a:hover {
     color: #ffffff;
     font-size: 24px;
 }
-
 
 .cursor::after {
     content: '|';
