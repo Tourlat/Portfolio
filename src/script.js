@@ -6,10 +6,13 @@ document.addEventListener('DOMContentLoaded', function() {
     let isTyping = true;
     let i = 0;
 
+    const hasPlayedTypingAnimation = localStorage.getItem('typingAnimationPlayed');
+
+
     function launch() {
         if (enterCommand) {
             enterCommand.textContent = "Enter command_";
-            setTimeout(type, 1000);
+            setTimeout(type, 400);
         }
     }
 
@@ -18,13 +21,14 @@ document.addEventListener('DOMContentLoaded', function() {
         if (i < text.length) {
             typingEffect.textContent += text.charAt(i);
             i++;
-            setTimeout(type, 200);
+            setTimeout(type, 100);
         } else {
             setTimeout(() => {
                 if (enterCommand) enterCommand.style.display = 'none';
                 typingEffect.classList.add('remove-cursor');
                 document.querySelector('.info').classList.add('show');
-            }, 500);
+                localStorage.setItem('typingAnimationPlayed', 'true');
+            }, 300);
         }
     }
 
@@ -40,4 +44,14 @@ document.addEventListener('DOMContentLoaded', function() {
         typingEffect.addEventListener('click', stopTyping);
         launch();
     }
+
+    if (hasPlayedTypingAnimation) {
+        stopTyping();
+    } else {
+        type();
+    }
+
+    window.addEventListener('beforeunload', function() {
+        localStorage.setItem('typingAnimationPlayed', 'false');
+    });
 });

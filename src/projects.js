@@ -12,6 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
     enterCommand.textContent = "Enter command_";
     setTimeout(() => {
         typeEffect(typingEffectProjects, textProjects, showProjectsContent);
-    }, 1000);
+    }, 0);
    
 });
