@@ -144,6 +144,11 @@ h1, .info h1, .info h2 {
     font-size: 24px;
 }
 
+.ub-link {
+    color: #76CCE0;
+    text-decoration: none;
+  
+}
 .cursor::after {
     content: '|';
     opacity: 1;
