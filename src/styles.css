@@ -70,7 +70,7 @@ body {
 }
 
 
-.info {
+.info, .info-skills {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -80,6 +80,10 @@ body {
     margin: 0 auto;
     opacity: 0;
     transition: opacity 1.5s ease;
+}
+.info-skills {
+    flex-direction: column;
+    opacity: 1;
 }
 
 .info.show {
@@ -104,13 +108,13 @@ h1 {
     width: 100%;
 }
 
-h1, .info h1, .info h2 {
+h1, .info h1, .info h2, .info-skills h2, .info-skills h1 {
     font-family: "Silkscreen", sans-serif;
     color: #76CCE0;
     margin: 20px 0;
 }
 
-.info p {
+.info p, .info-skills p {
     color: #ffffff;
     text-align: justify;
     max-width: 600px; 
@@ -201,3 +205,51 @@ h1, .info h1, .info h2 {
         max-width: 100%;
     }
 }
+/* Style for skill icons */
+.skill i {
+    font-size: 50px;
+    color: #76CCE0;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.skill i:hover {
+    transform: scale(1.2);
+    color: #ffffff;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;          /* Allow items to wrap to the next row */
+    justify-content: center;  /* Center items horizontally */
+    gap: 20px;                /* Space between items */
+    margin-top: 20px;
+    max-width: calc(5 * 120px + 4 * 20px); /* Limit to 5 items per row */
+}
+.skill {
+    width: 120px; /* Set a fixed width for each skill */
+}
+.skill {
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    text-decoration: none;    
+    color: inherit;        
+    transition: transform 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-5px) scale(1.1);
+}
+
+.skill i {
+    font-size: 50px;
+    color: #76CCE0;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.skill:hover i {
+    color: #ffffff;
+}
+
