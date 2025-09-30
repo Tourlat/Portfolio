@@ -81,12 +81,29 @@ body {
     opacity: 0;
     transition: opacity 1.5s ease;
 }
+
+.info-projects {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
 .info-skills {
     flex-direction: column;
     opacity: 1;
 }
 
 .info.show {
+    opacity: 1; 
+}
+
+.info-projects.show {
     opacity: 1; 
 }
 
@@ -108,7 +125,7 @@ h1 {
     width: 100%;
 }
 
-h1, .info h1, .info h2, .info-skills h2, .info-skills h1 {
+h1, .info h1, .info h2, .info-skills h2, .info-skills h1, .info-projects h1, .info-projects h2 {
     font-family: "Silkscreen", sans-serif;
     color: #76CCE0;
     margin: 20px 0;
@@ -119,6 +136,14 @@ h1, .info h1, .info h2, .info-skills h2, .info-skills h1 {
     text-align: justify;
     max-width: 600px; 
     line-height: 1.5;
+}
+
+.info-projects p {
+    color: #ffffff;
+    text-align: justify;
+    max-width: 100%; 
+    line-height: 1.5;
+    width: 100%;
 }
 
  ul {
